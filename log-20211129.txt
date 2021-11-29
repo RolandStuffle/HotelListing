@@ -1,0 +1,76 @@
+2021-11-29 15:26:53.522 +01:00 [INF] Application is starting
+2021-11-29 15:26:53.839 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-29 15:26:53.996 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-29 15:26:53.996 +01:00 [INF] Hosting environment: Development
+2021-11-29 15:26:53.996 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-11-29 15:26:54.020 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/ - -
+2021-11-29 15:26:54.081 +01:00 [INF] Executing endpoint '/Index'
+2021-11-29 15:26:54.125 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2021-11-29 15:26:54.134 +01:00 [INF] Executing handler method HotelListing.Pages.IndexModel.OnGet - ModelState is "Valid"
+2021-11-29 15:26:54.136 +01:00 [INF] Executed handler method OnGet, returned result .
+2021-11-29 15:26:54.140 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-11-29 15:26:54.141 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-11-29 15:26:54.331 +01:00 [INF] Executed page /Index in 200.331ms
+2021-11-29 15:26:54.333 +01:00 [INF] Executed endpoint '/Index'
+2021-11-29 15:26:54.372 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/ - - - 200 - text/html;+charset=utf-8 355.0198ms
+2021-11-29 15:26:54.424 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-11-29 15:26:54.429 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 5.6287ms
+2021-11-29 15:26:54.660 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/favicon.ico - -
+2021-11-29 15:26:54.667 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing\wwwroot\favicon.ico'
+2021-11-29 15:26:54.668 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/favicon.ico - - - 200 5430 image/x-icon 7.7926ms
+2021-11-29 15:29:32.609 +01:00 [INF] Application is starting
+2021-11-29 15:29:32.923 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-29 15:29:33.077 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-29 15:29:33.077 +01:00 [INF] Hosting environment: Development
+2021-11-29 15:29:33.077 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-11-29 15:29:33.107 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/ - -
+2021-11-29 15:29:33.166 +01:00 [INF] Executing endpoint '/Index'
+2021-11-29 15:29:33.210 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2021-11-29 15:29:33.218 +01:00 [INF] Executing handler method HotelListing.Pages.IndexModel.OnGet - ModelState is "Valid"
+2021-11-29 15:29:33.220 +01:00 [INF] Executed handler method OnGet, returned result .
+2021-11-29 15:29:33.223 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-11-29 15:29:33.224 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-11-29 15:29:33.404 +01:00 [INF] Executed page /Index in 190.6181ms
+2021-11-29 15:29:33.406 +01:00 [INF] Executed endpoint '/Index'
+2021-11-29 15:29:34.157 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/ - - - 200 - text/html;+charset=utf-8 1052.8063ms
+2021-11-29 15:29:34.186 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-11-29 15:29:34.191 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 5.4274ms
+2021-11-29 15:29:35.335 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/favicon.ico - -
+2021-11-29 15:29:35.341 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing\wwwroot\favicon.ico'
+2021-11-29 15:29:35.342 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/favicon.ico - - - 200 5430 image/x-icon 6.7445ms
+2021-11-29 15:36:02.135 +01:00 [INF] Application is starting
+2021-11-29 15:40:19.061 +01:00 [INF] Application is starting
+2021-11-29 15:40:19.422 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-29 15:40:19.592 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-29 15:40:19.592 +01:00 [INF] Hosting environment: Development
+2021-11-29 15:40:19.592 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-11-29 15:40:19.622 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/ - -
+2021-11-29 15:40:19.719 +01:00 [INF] Executing endpoint '/Index'
+2021-11-29 15:40:19.754 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2021-11-29 15:40:19.765 +01:00 [INF] Executing handler method HotelListing.Pages.IndexModel.OnGet - ModelState is "Valid"
+2021-11-29 15:40:19.768 +01:00 [INF] Executed handler method OnGet, returned result .
+2021-11-29 15:40:19.772 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-11-29 15:40:19.773 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-11-29 15:40:19.974 +01:00 [INF] Executed page /Index in 212.0486ms
+2021-11-29 15:40:19.975 +01:00 [INF] Executed endpoint '/Index'
+2021-11-29 15:40:20.019 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/ - - - 200 - text/html;+charset=utf-8 399.6787ms
+2021-11-29 15:40:20.067 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-29 15:40:20.069 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/css/site.css - -
+2021-11-29 15:40:20.069 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-11-29 15:40:20.071 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/lib/jquery/dist/jquery.min.js - -
+2021-11-29 15:40:20.073 +01:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2021-11-29 15:40:20.074 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 7.1055ms
+2021-11-29 15:40:20.075 +01:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2021-11-29 15:40:20.075 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/lib/jquery/dist/jquery.min.js - - - 304 - application/javascript 4.3694ms
+2021-11-29 15:40:20.077 +01:00 [INF] The file /css/site.css was not modified
+2021-11-29 15:40:20.077 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/css/site.css - - - 304 - text/css 8.1124ms
+2021-11-29 15:40:20.084 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-29 15:40:20.085 +01:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2021-11-29 15:40:20.085 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 0.8673ms
+2021-11-29 15:40:20.100 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-29 15:40:20.100 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 30.8647ms
+2021-11-29 15:40:20.100 +01:00 [INF] The file /js/site.js was not modified
+2021-11-29 15:40:20.100 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 304 - application/javascript 0.9892ms
+2021-11-29 15:40:20.252 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/favicon.ico - -
+2021-11-29 15:40:20.259 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing\wwwroot\favicon.ico'
+2021-11-29 15:40:20.267 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/favicon.ico - - - 200 5430 image/x-icon 14.4762ms
