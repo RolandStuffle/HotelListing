@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using HotelListing.Data.Context;
 using HotelListing.IRepository;
 using HotelListing.Repository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -30,6 +31,9 @@ namespace HotelListing
             {
                 options.UseSqlServer(Configuration.GetConnectionString("sqlConnection"));
             });
+
+            services.AddAuthentication();
+            services.ConfigureIdentity();
 
             services.AddCors(o =>
             {
