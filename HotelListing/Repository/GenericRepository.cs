@@ -44,7 +44,7 @@ namespace HotelListing.Repository
         {
             IQueryable<T> query = _db;
 
-            includes?.ForEach(includeProperty => query.Include(includeProperty));
+            includes?.ForEach(includeProperty => query = query.Include(includeProperty));
 
             return await query.AsNoTracking().FirstOrDefaultAsync(expression);
         }
