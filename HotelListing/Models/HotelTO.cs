@@ -5,8 +5,12 @@ namespace HotelListing.Models
     public class HotelTO : CreateHotelTO
     {
         public int Id { get; set; }
-        
+
         public CountryTO Country { get; set; }
+    }
+
+    public class UpdateHotelTO : CreateHotelTO
+    {
     }
 
     public class CreateHotelTO

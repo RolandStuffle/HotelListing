@@ -251,3 +251,402 @@ Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10208: 
 DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2021-12-01 10:55:38.080 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
 2021-12-01 10:55:38.082 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44375/api/hotel/1 - - - 401 - - 127.4798ms
+2021-12-01 11:16:36.047 +01:00 [INF] Application is starting
+2021-12-01 11:16:38.547 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-01 11:16:39.329 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-01 11:16:39.329 +01:00 [INF] Hosting environment: Development
+2021-12-01 11:16:39.329 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-12-01 11:16:39.428 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/index.html - -
+2021-12-01 11:16:39.927 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/index.html - - - 200 - text/html;charset=utf-8 488.3697ms
+2021-12-01 11:16:39.929 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-12-01 11:16:40.018 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 88.2895ms
+2021-12-01 11:16:40.312 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - -
+2021-12-01 11:16:40.511 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 198.5940ms
+2021-12-01 11:17:24.055 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44375/api/Hotel application/json-patch+json 106
+2021-12-01 11:17:24.067 +01:00 [INF] CORS policy execution successful.
+2021-12-01 11:17:24.231 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-12-01 11:17:24.287 +01:00 [INF] Route matched with {action = "CreateHotel", controller = "Hotel", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHotel(HotelListing.Models.CreateHotelTO) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-12-01 11:17:25.671 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 11:17:27.914 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Hotels] ([Address], [CountryId], [Name], [Rating])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Hotels]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-12-01 11:17:27.996 +01:00 [INF] Executing CreatedAtRouteResult, writing value of type '<>f__AnonymousType1`1[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-12-01 11:17:28.040 +01:00 [INF] Executed action HotelListing.Controllers.HotelController.CreateHotel (HotelListing) in 3747.4316ms
+2021-12-01 11:17:28.041 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-12-01 11:17:28.044 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.CreatedAtRouteResult.OnFormatting(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)
+   at Microsoft.AspNetCore.Mvc.ObjectResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-01 11:17:28.105 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44375/api/Hotel application/json-patch+json 106 - 500 - text/plain 4049.5702ms
+2021-12-01 11:20:10.580 +01:00 [INF] Application is starting
+2021-12-01 11:20:12.749 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-01 11:20:13.371 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-01 11:20:13.371 +01:00 [INF] Hosting environment: Development
+2021-12-01 11:20:13.371 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-12-01 11:20:13.444 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/index.html - -
+2021-12-01 11:20:13.988 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/index.html - - - 200 - text/html;charset=utf-8 497.1590ms
+2021-12-01 11:20:13.988 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-12-01 11:20:14.038 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 49.4657ms
+2021-12-01 11:20:14.249 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - -
+2021-12-01 11:20:14.465 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 214.9351ms
+2021-12-01 11:21:04.306 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44375/api/Hotel application/json-patch+json 92
+2021-12-01 11:21:04.314 +01:00 [INF] CORS policy execution successful.
+2021-12-01 11:21:04.484 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-12-01 11:21:04.540 +01:00 [INF] Route matched with {action = "CreateHotel", controller = "Hotel", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHotel(HotelListing.Models.CreateHotelTO) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-12-01 11:21:05.964 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 11:21:06.669 +01:00 [INF] Executed DbCommand (55ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Hotels] ([Address], [CountryId], [Name], [Rating])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Hotels]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-12-01 11:21:06.752 +01:00 [INF] Executing CreatedAtRouteResult, writing value of type 'HotelListing.Data.Entities.Hotel'.
+2021-12-01 11:21:06.842 +01:00 [INF] Executed action HotelListing.Controllers.HotelController.CreateHotel (HotelListing) in 2296.3027ms
+2021-12-01 11:21:06.843 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.CreateHotel (HotelListing)'
+2021-12-01 11:21:06.849 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44375/api/Hotel application/json-patch+json 92 - 201 99 application/json;+charset=utf-8 2543.6177ms
+2021-12-01 11:28:02.386 +01:00 [INF] Application is starting
+2021-12-01 11:28:04.262 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-01 11:28:04.847 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-01 11:28:04.847 +01:00 [INF] Hosting environment: Development
+2021-12-01 11:28:04.847 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-12-01 11:28:04.901 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/index.html - -
+2021-12-01 11:28:05.291 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/index.html - - - 200 - text/html;charset=utf-8 394.4629ms
+2021-12-01 11:28:05.292 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-12-01 11:28:05.361 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 68.8989ms
+2021-12-01 11:28:05.544 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - -
+2021-12-01 11:28:05.738 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.7349ms
+2021-12-01 11:28:29.594 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44375/api/Country application/json-patch+json 45
+2021-12-01 11:28:29.606 +01:00 [INF] CORS policy execution successful.
+2021-12-01 11:28:29.757 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.CreateCountry (HotelListing)'
+2021-12-01 11:28:29.809 +01:00 [INF] Route matched with {action = "CreateCountry", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCountry(HotelListing.Models.CreateCountryTO) on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 11:28:30.317 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-12-01 11:28:30.400 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.CreateCountry (HotelListing) in 585.2548ms
+2021-12-01 11:28:30.401 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.CreateCountry (HotelListing)'
+2021-12-01 11:28:30.403 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44375/api/Country application/json-patch+json 45 - 400 249 application/problem+json;+charset=utf-8 809.3220ms
+2021-12-01 11:28:39.961 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44375/api/Country application/json-patch+json 42
+2021-12-01 11:28:39.961 +01:00 [INF] CORS policy execution successful.
+2021-12-01 11:28:39.963 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.CreateCountry (HotelListing)'
+2021-12-01 11:28:39.965 +01:00 [INF] Route matched with {action = "CreateCountry", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCountry(HotelListing.Models.CreateCountryTO) on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 11:28:40.855 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 11:28:41.522 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Countries] ([Name], [ShortName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Countries]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-12-01 11:28:41.644 +01:00 [INF] Executing CreatedAtRouteResult, writing value of type 'HotelListing.Data.Entities.Country'.
+2021-12-01 11:28:41.679 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.CreateCountry (HotelListing) in 1713.5451ms
+2021-12-01 11:28:41.680 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.CreateCountry (HotelListing)'
+2021-12-01 11:28:41.684 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44375/api/Country application/json-patch+json 42 - 201 54 application/json;+charset=utf-8 1723.4254ms
+2021-12-01 11:57:38.233 +01:00 [INF] Application is starting
+2021-12-01 11:57:40.269 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-01 11:57:40.865 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-01 11:57:40.865 +01:00 [INF] Hosting environment: Development
+2021-12-01 11:57:40.865 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-12-01 11:57:40.924 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/index.html - -
+2021-12-01 11:57:41.385 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/index.html - - - 200 - text/html;charset=utf-8 463.6929ms
+2021-12-01 11:57:41.505 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-12-01 11:57:41.665 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 154.7005ms
+2021-12-01 11:57:41.793 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - -
+2021-12-01 11:57:42.014 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 220.9675ms
+2021-12-01 11:58:09.468 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:44375/api/Country/4 application/json-patch+json 44
+2021-12-01 11:58:09.481 +01:00 [INF] CORS policy execution successful.
+2021-12-01 11:58:09.636 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.UpdateCountry (HotelListing)'
+2021-12-01 11:58:09.699 +01:00 [INF] Route matched with {action = "UpdateCountry", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCountry(Int32, HotelListing.Models.UpdateCountryTO) on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 11:58:11.077 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 11:58:13.884 +01:00 [INF] Executed DbCommand (56ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__id_0
+2021-12-01 11:58:14.085 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Countries] SET [Name] = @p0, [ShortName] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+2021-12-01 11:58:14.114 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2021-12-01 11:58:14.121 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.UpdateCountry (HotelListing) in 4417.1203ms
+2021-12-01 11:58:14.122 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.UpdateCountry (HotelListing)'
+2021-12-01 11:58:14.129 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:44375/api/Country/4 application/json-patch+json 44 - 204 - - 4661.0902ms
+2021-12-01 11:58:20.577 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:44375/api/Country/7 application/json-patch+json 44
+2021-12-01 11:58:20.578 +01:00 [INF] CORS policy execution successful.
+2021-12-01 11:58:20.581 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.UpdateCountry (HotelListing)'
+2021-12-01 11:58:20.583 +01:00 [INF] Route matched with {action = "UpdateCountry", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCountry(Int32, HotelListing.Models.UpdateCountryTO) on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 11:58:20.622 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 11:58:20.627 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__id_0
+2021-12-01 11:58:20.636 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2021-12-01 11:58:20.637 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.UpdateCountry (HotelListing) in 54.0058ms
+2021-12-01 11:58:20.637 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.UpdateCountry (HotelListing)'
+2021-12-01 11:58:20.638 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:44375/api/Country/7 application/json-patch+json 44 - 400 - text/plain;+charset=utf-8 60.9825ms
+2021-12-01 12:38:30.046 +01:00 [INF] Application is starting
+2021-12-01 12:38:32.194 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-01 12:38:32.775 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-01 12:38:32.775 +01:00 [INF] Hosting environment: Development
+2021-12-01 12:38:32.775 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-12-01 12:38:32.832 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/index.html - -
+2021-12-01 12:38:33.447 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-12-01 12:38:33.449 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/index.html - - - 200 - text/html;charset=utf-8 619.7928ms
+2021-12-01 12:38:33.476 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 28.3749ms
+2021-12-01 12:38:33.737 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - -
+2021-12-01 12:38:33.931 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.2821ms
+2021-12-01 12:39:24.344 +01:00 [INF] Application is starting
+2021-12-01 12:39:26.241 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-01 12:39:26.956 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-01 12:39:26.956 +01:00 [INF] Hosting environment: Development
+2021-12-01 12:39:26.956 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-12-01 12:39:27.043 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/index.html - -
+2021-12-01 12:39:27.432 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/index.html - - - 200 - text/html;charset=utf-8 392.9142ms
+2021-12-01 12:39:27.517 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-12-01 12:39:27.565 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 48.2939ms
+2021-12-01 12:39:27.709 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - -
+2021-12-01 12:39:27.887 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 178.4929ms
+2021-12-01 12:40:02.848 +01:00 [INF] Application is starting
+2021-12-01 12:40:04.517 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-01 12:40:04.971 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-01 12:40:04.971 +01:00 [INF] Hosting environment: Development
+2021-12-01 12:40:04.971 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-12-01 12:40:05.061 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/index.html - -
+2021-12-01 12:40:05.412 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/index.html - - - 200 - text/html;charset=utf-8 352.9389ms
+2021-12-01 12:40:05.417 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-12-01 12:40:05.491 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 73.8553ms
+2021-12-01 12:40:05.639 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - -
+2021-12-01 12:40:05.782 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.8859ms
+2021-12-01 12:40:39.405 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:44375/api/Hotel/1 application/json-patch+json 89
+2021-12-01 12:40:39.416 +01:00 [INF] CORS policy execution successful.
+2021-12-01 12:40:39.571 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.UpdateHotel (HotelListing)'
+2021-12-01 12:40:39.622 +01:00 [INF] Route matched with {action = "UpdateHotel", controller = "Hotel", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateHotel(Int32, HotelListing.Models.UpdateHotelTO) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-12-01 12:40:41.012 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 12:40:43.415 +01:00 [INF] Executed DbCommand (55ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0
+2021-12-01 12:40:43.631 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Hotels] SET [Address] = @p0, [CountryId] = @p1, [Name] = @p2, [Rating] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2021-12-01 12:40:43.663 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2021-12-01 12:40:43.671 +01:00 [INF] Executed action HotelListing.Controllers.HotelController.UpdateHotel (HotelListing) in 4043.5773ms
+2021-12-01 12:40:43.672 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.UpdateHotel (HotelListing)'
+2021-12-01 12:40:43.678 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:44375/api/Hotel/1 application/json-patch+json 89 - 204 - - 4274.4541ms
+2021-12-01 12:40:54.261 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:44375/api/Hotel/1 application/json-patch+json 91
+2021-12-01 12:40:54.262 +01:00 [INF] CORS policy execution successful.
+2021-12-01 12:40:54.265 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.UpdateHotel (HotelListing)'
+2021-12-01 12:40:54.266 +01:00 [INF] Route matched with {action = "UpdateHotel", controller = "Hotel", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateHotel(Int32, HotelListing.Models.UpdateHotelTO) on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-12-01 12:40:54.310 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 12:40:54.315 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+WHERE [h].[Id] = @__id_0
+2021-12-01 12:40:54.332 +01:00 [ERR] Failed executing DbCommand (12ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Hotels] SET [Address] = @p0, [CountryId] = @p1, [Name] = @p2, [Rating] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2021-12-01 12:40:54.399 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'HotelListing.Data.Context.DatabaseContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "HotelListing_DB", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3984251e-b20d-493d-8a5b-a05c4e52d82d
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "HotelListing_DB", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3984251e-b20d-493d-8a5b-a05c4e52d82d
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2021-12-01 12:40:54.617 +01:00 [ERR] Something went wrong inside UpdateHotel
+2021-12-01 12:40:54.624 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-12-01 12:40:54.625 +01:00 [INF] Executed action HotelListing.Controllers.HotelController.UpdateHotel (HotelListing) in 359.0658ms
+2021-12-01 12:40:54.625 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.UpdateHotel (HotelListing)'
+2021-12-01 12:40:54.626 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:44375/api/Hotel/1 application/json-patch+json 91 - 500 - text/plain;+charset=utf-8 365.3393ms
+2021-12-01 12:59:08.030 +01:00 [INF] Application is starting
+2021-12-01 12:59:09.740 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-01 12:59:10.221 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-01 12:59:10.221 +01:00 [INF] Hosting environment: Development
+2021-12-01 12:59:10.221 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-12-01 12:59:10.289 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/index.html - -
+2021-12-01 12:59:10.711 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-12-01 12:59:10.712 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/index.html - - - 200 - text/html;charset=utf-8 425.9568ms
+2021-12-01 12:59:10.754 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 42.6692ms
+2021-12-01 12:59:10.960 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - -
+2021-12-01 12:59:11.112 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 152.2575ms
+2021-12-01 12:59:30.843 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:44375/api/Country/1 - -
+2021-12-01 12:59:30.853 +01:00 [INF] CORS policy execution successful.
+2021-12-01 12:59:31.011 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.DeleteCountry (HotelListing)'
+2021-12-01 12:59:31.061 +01:00 [INF] Route matched with {action = "DeleteCountry", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCountry(Int32) on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 12:59:32.358 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 12:59:34.719 +01:00 [INF] Executed DbCommand (54ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__id_0
+2021-12-01 12:59:34.797 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__p_0
+2021-12-01 12:59:34.847 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2021-12-01 12:59:34.854 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.DeleteCountry (HotelListing) in 3787.5938ms
+2021-12-01 12:59:34.855 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.DeleteCountry (HotelListing)'
+2021-12-01 12:59:34.860 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:44375/api/Country/1 - - - 204 - - 4017.3370ms
+2021-12-01 12:59:46.130 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/api/Country - -
+2021-12-01 12:59:46.133 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2021-12-01 12:59:46.139 +01:00 [INF] Route matched with {action = "GetCountries", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries() on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 12:59:46.172 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 12:59:46.196 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2021-12-01 12:59:46.243 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.CountryTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-01 12:59:46.376 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountries (HotelListing) in 236.6219ms
+2021-12-01 12:59:46.376 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2021-12-01 12:59:46.377 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/api/Country - - - 200 227 application/json;+charset=utf-8 246.8878ms
+2021-12-01 13:00:24.081 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:44375/api/Country/1 - -
+2021-12-01 13:00:24.087 +01:00 [INF] CORS policy execution successful.
+2021-12-01 13:00:24.090 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.DeleteCountry (HotelListing)'
+2021-12-01 13:00:24.090 +01:00 [INF] Route matched with {action = "DeleteCountry", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCountry(Int32) on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 13:00:24.102 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 13:00:24.110 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__id_0
+2021-12-01 13:00:24.119 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__p_0
+2021-12-01 13:00:24.119 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2021-12-01 13:00:24.120 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.DeleteCountry (HotelListing) in 29.012ms
+2021-12-01 13:00:24.120 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.DeleteCountry (HotelListing)'
+2021-12-01 13:00:24.120 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:44375/api/Country/1 - - - 204 - - 39.2596ms
+2021-12-01 13:00:30.094 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:44375/api/Country/13 - -
+2021-12-01 13:00:30.094 +01:00 [INF] CORS policy execution successful.
+2021-12-01 13:00:30.094 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.DeleteCountry (HotelListing)'
+2021-12-01 13:00:30.094 +01:00 [INF] Route matched with {action = "DeleteCountry", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCountry(Int32) on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 13:00:30.095 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 13:00:30.101 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__id_0
+2021-12-01 13:00:30.103 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2021-12-01 13:00:30.104 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.DeleteCountry (HotelListing) in 9.1032ms
+2021-12-01 13:00:30.104 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.DeleteCountry (HotelListing)'
+2021-12-01 13:00:30.104 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:44375/api/Country/13 - - - 400 - text/plain;+charset=utf-8 10.6159ms
+2021-12-01 13:02:20.421 +01:00 [INF] Application is starting
+2021-12-01 13:02:23.772 +01:00 [INF] User profile is available. Using 'C:\Users\sturol01\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-01 13:02:24.283 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-01 13:02:24.283 +01:00 [INF] Hosting environment: Development
+2021-12-01 13:02:24.283 +01:00 [INF] Content root path: C:\Users\sturol01\Documents\O Reily Tutorials\NET\ASP Net\HotelListing\HotelListing
+2021-12-01 13:02:24.358 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/index.html - -
+2021-12-01 13:02:24.752 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/index.html - - - 200 - text/html;charset=utf-8 395.4311ms
+2021-12-01 13:02:24.761 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - -
+2021-12-01 13:02:24.802 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 34.1053ms
+2021-12-01 13:02:25.035 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - -
+2021-12-01 13:02:25.214 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 178.8312ms
+2021-12-01 13:02:44.623 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:44375/api/Country/1 - -
+2021-12-01 13:02:44.631 +01:00 [INF] CORS policy execution successful.
+2021-12-01 13:02:44.770 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.DeleteCountry (HotelListing)'
+2021-12-01 13:02:44.830 +01:00 [INF] Route matched with {action = "DeleteCountry", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCountry(Int32) on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 13:02:46.054 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 13:02:46.859 +01:00 [INF] Executed DbCommand (55ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__id_0
+2021-12-01 13:02:46.924 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__p_0
+2021-12-01 13:02:47.085 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Countries]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2021-12-01 13:02:47.116 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2021-12-01 13:02:47.123 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.DeleteCountry (HotelListing) in 2287.916ms
+2021-12-01 13:02:47.123 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.DeleteCountry (HotelListing)'
+2021-12-01 13:02:47.128 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:44375/api/Country/1 - - - 204 - - 2505.5987ms
+2021-12-01 13:02:59.035 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/api/Country - -
+2021-12-01 13:02:59.043 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2021-12-01 13:02:59.050 +01:00 [INF] Route matched with {action = "GetCountries", controller = "Country", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCountries() on controller HotelListing.Controllers.CountryController (HotelListing).
+2021-12-01 13:02:59.088 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 13:02:59.101 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2021-12-01 13:02:59.145 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.CountryTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-01 13:02:59.303 +01:00 [INF] Executed action HotelListing.Controllers.CountryController.GetCountries (HotelListing) in 253.0831ms
+2021-12-01 13:02:59.303 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.CountryController.GetCountries (HotelListing)'
+2021-12-01 13:02:59.304 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/api/Country - - - 200 172 application/json;+charset=utf-8 269.4038ms
+2021-12-01 13:03:13.995 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44375/api/Hotel - -
+2021-12-01 13:03:13.998 +01:00 [INF] Executing endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-12-01 13:03:14.002 +01:00 [INF] Route matched with {action = "GetHotels", controller = "Hotel", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetHotels() on controller HotelListing.Controllers.HotelController (HotelListing).
+2021-12-01 13:03:14.016 +01:00 [INF] Entity Framework Core 5.0.12 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-12-01 13:03:14.028 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CountryId], [h].[Name], [h].[Rating]
+FROM [Hotels] AS [h]
+2021-12-01 13:03:14.047 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.Models.HotelTO, HotelListing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-01 13:03:14.053 +01:00 [INF] Executed action HotelListing.Controllers.HotelController.GetHotels (HotelListing) in 50.8054ms
+2021-12-01 13:03:14.053 +01:00 [INF] Executed endpoint 'HotelListing.Controllers.HotelController.GetHotels (HotelListing)'
+2021-12-01 13:03:14.053 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44375/api/Hotel - - - 200 195 application/json;+charset=utf-8 58.4095ms

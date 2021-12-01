@@ -10,6 +10,11 @@ namespace HotelListing.Models
         public virtual IList<HotelTO> Hotels { get; set; }
     }
 
+    public class UpdateCountryTO : CreateCountryTO
+    {
+
+    }
+
     public class CreateCountryTO
     {
         [Required]
